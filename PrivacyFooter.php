@@ -25,6 +25,8 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     // Module constants
     public const CUSTOM_AUTHOR = 'Lars van Ravenzwaaij';
     public const CUSTOM_VERSION = '1.0.0';
+    public const CUSTOM_LATEST_VERSION = 'https://github.com/LarsRabe/PrivacyFooter';
+    public const CUSTOM_SUPPORT_URL = 'https://github.com/LarsRabe/PrivacyFooter/issues';
 
     /**
      * @return string
@@ -51,6 +53,25 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         return self::CUSTOM_VERSION;
     }
+
+    /**
+     * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleLatestVersion()
+     */
+    public function customModuleLatestVersion(): string
+    {
+        return self::CUSTOM_LATEST_VERSION;
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleSupportUrl()
+     */
+    public function customModuleSupportUrl(): string
+    {
+        return self::CUSTOM_SUPPORT_URL;
+    }
+
 
     /**
      * Bootstrap the module
@@ -102,6 +123,9 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         $page = '';
         switch (I18N::languageTag()) {
+            case 'de':
+                $page = '::page-de';
+                break;
             case 'nl':
                 $page = '::page-nl';
                 break;
