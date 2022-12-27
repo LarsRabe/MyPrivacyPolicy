@@ -119,13 +119,12 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
         $page = '';
         switch ($this->language_switch) {
             case 'nl':
-            case 'be':
                 $page = '::page-dutch';
                 break;
             default:
                 $page = '::page';
         }
-        
+
         return $this->viewResponse($this->name() . '::page', [
             'title' => $this->title(),
             'tree'  => $request->getAttribute('tree'),
