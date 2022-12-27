@@ -24,7 +24,10 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
 
     // Module constants
     public const CUSTOM_AUTHOR = 'Lars van Ravenzwaaij';
-    public const CUSTOM_VERSION = '2.1.15';
+    public const CUSTOM_VERSION = '1.0.0';
+	
+	/** @var LanguageSwitch */
+	private $language_switch;
 
     /**
      * @return string
@@ -70,8 +73,21 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         return __DIR__ . '/resources/';
     }
-
+	
     /**
+     * Additional custom translations.
+     *
+     * @param string $language
+     *
+     * @return array<string,string>
+     */
+    public function customTranslations(string $language): array
+    {
+        $this->language_switch = $language;
+
+        return [];
+   
+   /**
      * A footer, to be added at the bottom of every page.
      *
      * @param ServerRequestInterface $request
@@ -101,6 +117,16 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     public function getPageAction(ServerRequestInterface $request): ResponseInterface
     {
 
+        $page = '';
+        switch ($this->language_switch) {
+            case 'nl':
+            case 'be':
+                $page = '::page-dutch';
+                break;
+            default:
+                $page = '::page';
+        }
+		
         return $this->viewResponse($this->name() . '::page', [
             'title' => $this->title(),
             'tree'  => $request->getAttribute('tree'),
