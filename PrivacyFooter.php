@@ -25,9 +25,9 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     // Module constants
     public const CUSTOM_AUTHOR = 'Lars van Ravenzwaaij';
     public const CUSTOM_VERSION = '1.0.0';
-	
-	/** @var LanguageSwitch */
-	private $language_switch;
+    
+    /** @var LanguageSwitch */
+    private $language_switch;
 
     /**
      * @return string
@@ -73,7 +73,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         return __DIR__ . '/resources/';
     }
-	
+    
     /**
      * Additional custom translations.
      *
@@ -126,7 +126,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
             default:
                 $page = '::page';
         }
-		
+        
         return $this->viewResponse($this->name() . '::page', [
             'title' => $this->title(),
             'tree'  => $request->getAttribute('tree'),
