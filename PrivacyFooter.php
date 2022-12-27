@@ -116,7 +116,6 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function getPageAction(ServerRequestInterface $request): ResponseInterface
     {
-
         $page = '';
         switch ($this->language_switch) {
             case 'nl':
