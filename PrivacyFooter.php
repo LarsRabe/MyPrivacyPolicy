@@ -25,8 +25,8 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     // Module constants
     public const CUSTOM_AUTHOR = 'Lars van Ravenzwaaij';
     public const CUSTOM_VERSION = '1.0.0';
-    public const CUSTOM_LATEST_VERSION = 'https://github.com/LarsRabe/PrivacyFooter';
-    public const CUSTOM_SUPPORT_URL = 'https://github.com/LarsRabe/PrivacyFooter/issues';
+    public const CUSTOM_LATEST_VERSION = 'https://github.com/LarsRabe/PrivacyFooter/latest-version.txt';
+    public const CUSTOM_SUPPORT_URL = 'https://github.com/LarsRabe/PrivacyFooter';
 
     /**
      * @return string
@@ -58,7 +58,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleLatestVersion()
      */
-    public function customModuleLatestVersion(): string
+    public function customModuleLatestVersionUrl(): string
     {
         return self::CUSTOM_LATEST_VERSION;
     }
