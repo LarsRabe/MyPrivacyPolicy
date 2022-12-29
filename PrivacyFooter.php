@@ -123,10 +123,13 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         $page = '';
         switch (I18N::languageTag()) {
-            case 'de':
+            case 'de-DE':
+            case 'de-AT':
+            case 'de-CH':
                 $page = '::page-de';
                 break;
-            case 'nl':
+            case 'nl-NL':
+            case 'nl-BE':
                 $page = '::page-nl';
                 break;
             default:
