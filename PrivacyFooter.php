@@ -131,6 +131,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
                 break;
             default:
                 $page = '::page';
+                break;
         }
 
         return $this->viewResponse($this->name() . $page, [
