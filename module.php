@@ -6,8 +6,8 @@
 
 declare(strict_types=1);
 
-namespace PrivacyFooterNameSpace;
+namespace PrivacyPolicyFooterNameSpace;
 
-require __DIR__ . '/PrivacyFooter.php';
+require __DIR__ . '/PrivacyPolicyFooter.php';
 
-return new PrivacyFooter();
+return new PrivacyPolicyFooter();

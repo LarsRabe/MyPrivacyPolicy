@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace PrivacyFooterNameSpace;
+namespace PrivacyPolicyFooterNameSpace;
 
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\Module\AbstractModule;
@@ -18,7 +18,7 @@ use Fisharebest\Webtrees\View;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
-class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, ModuleFooterInterface {
+class PrivacyPolicyFooter extends AbstractModule implements ModuleCustomInterface, ModuleFooterInterface {
     use ModuleCustomTrait;
     use ModuleFooterTrait;
 
@@ -54,7 +54,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://github.com/LarsRabe/PrivacyPolicyFooter/latest-version.txt';;
+        return 'https://github.com/LarsRabe/PrivacyPolicyFooter/latest-version.txt';
     }
 
     /**
