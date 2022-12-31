@@ -1,2 +1,2 @@
 # PrivacyPolicyFooter
-Custom Privacy Statement for webtrees in dutch, german and english.
+Custom module for a footer with privacy statement for webtrees in dutch, german and english.
