@@ -54,7 +54,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://github.com/LarsRabe/PrivacyFooter/latest-version.txt';;
+        return 'https://github.com/LarsRabe/PrivacyPolicyFooter/latest-version.txt';;
     }
 
     /**
@@ -63,7 +63,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleSupportUrl(): string
     {
-        return 'https://github.com/LarsRabe/PrivacyFooter';
+        return 'https://github.com/LarsRabe/PrivacyPolicyFooter';
     }
 
 
