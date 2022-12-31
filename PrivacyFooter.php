@@ -22,12 +22,6 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     use ModuleCustomTrait;
     use ModuleFooterTrait;
 
-    // Module constants
-    public const CUSTOM_AUTHOR = 'Lars van Ravenzwaaij';
-    public const CUSTOM_VERSION = '1.0.0';
-    public const CUSTOM_LATEST_VERSION = 'https://github.com/LarsRabe/PrivacyFooter/latest-version.txt';
-    public const CUSTOM_SUPPORT_URL = 'https://github.com/LarsRabe/PrivacyFooter';
-
     /**
      * @return string
      */
@@ -42,7 +36,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleAuthorName(): string
     {
-        return self::CUSTOM_AUTHOR;
+        return 'Lars van Ravenzwaaij';
 
     }
     /**
@@ -51,16 +45,16 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleVersion(): string
     {
-        return self::CUSTOM_VERSION;
+        return '1.0.0';
     }
 
     /**
      * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleLatestVersion()
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleLatestVersionUrl()
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return self::CUSTOM_LATEST_VERSION;
+        return 'https://github.com/LarsRabe/PrivacyFooter/latest-version.txt';;
     }
 
     /**
@@ -69,7 +63,7 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
      */
     public function customModuleSupportUrl(): string
     {
-        return self::CUSTOM_SUPPORT_URL;
+        return 'https://github.com/LarsRabe/PrivacyFooter';
     }
 
 
@@ -123,13 +117,10 @@ class PrivacyFooter extends AbstractModule implements ModuleCustomInterface, Mod
     {
         $page = '';
         switch (I18N::languageTag()) {
-            case 'de-DE':
-            case 'de-AT':
-            case 'de-CH':
+            case 'de':
                 $page = '::page-de';
                 break;
-            case 'nl-NL':
-            case 'nl-BE':
+            case 'nl':
                 $page = '::page-nl';
                 break;
             default:
