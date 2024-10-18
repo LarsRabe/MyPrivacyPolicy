@@ -54,7 +54,7 @@ class PrivacyPolicyFooter extends AbstractModule implements ModuleCustomInterfac
      */
     public function customModuleLatestVersionUrl(): string
     {
-        return 'https://github.com/LarsRabe/PrivacyPolicyFooter/latest-version.txt';
+        return 'https://github.com/LarsRabe/PrivacyPolicyFooter/raw/main/latest-version.txt';
     }
 
     /**
