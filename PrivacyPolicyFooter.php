@@ -45,7 +45,7 @@ class PrivacyPolicyFooter extends AbstractModule implements ModuleCustomInterfac
      */
     public function customModuleVersion(): string
     {
-        return '1.0.0';
+        return '1.0.1';
     }
 
     /**
